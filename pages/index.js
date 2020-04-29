@@ -1,22 +1,35 @@
-import Fetch from 'isomorphic-unfetch';
+import Navbar from '../components/Navbar';
 
 
+const index = (props) => (
+    
 
-const Index = (props) => (
     <div>
-        <h1>Welcome to Bitzprice</h1>
+    <Navbar />
+        <div className="about_text">
+        <h1>Welcome to NewProject</h1>
+        <p>This is the Home page</p>
+ 
+        </div>
+        
+        <style jsx>{`
+    .abouts{
+        position:relative;
+        display:inline-line;
+    }
+    .about_text{
+        float:left;
+        position:absolute;
+        margin-left:30%;
+
+    }
+ 
+
+`}</style>
     </div>
-)
+);
 
 
-Index.getInitialProps = async function(){
-    const res = await fetch('');
-    const data = await res.json();
 
-
-    return{
-        bpi: data;
-    };
-}
 
 export default index;
